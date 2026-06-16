@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Ashitha C.S. | Advocate Portfolio & Resume</title>
+    <meta name="description" content="Portfolio of Advocate Ashitha C.S., a Junior Advocate specializing in Criminal Law, Family Law, Civil Disputes, and Legal Research. BA, LL.B (Hons) graduate of Sree Narayana Law College, Ernakulam.">
+    <meta name="keywords" content="Ashitha CS, Advocate Ashitha, Junior Advocate, Lawyer Portfolio, Ernakulam Lawyer, SN Law College Poothotta, Law Graduate Kerala">
+    <meta name="author" content="Ashitha C.S.">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+    <!-- Interactive Particle Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Ambient Background Glow Orbs -->
+    <div class="bg-glow-container" aria-hidden="true">
+        <div class="bg-grid-overlay"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo" id="navLogo">
+                <span class="logo-icon" aria-hidden="true">⚖</span>
+                <div>
+                    <span class="logo-text">ASHITHA C.S.</span>
+                    <span class="logo-subtitle">Practising Advocate</span>
+                </div>
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#practice" class="nav-link">Practice Areas</a>
+                <a href="#experience" class="nav-link">Internships</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#cv" class="nav-link">CV</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    Practising Advocate
+                </div>
+                <h1 class="hero-title-main">
+                    <span class="typewriter" id="heroTypewriter">Upholding Justice</span> <br>
+                    <span class="text-gold-gradient">With Integrity</span>
+                </h1>
+                <h2 class="hero-title-sub">Advocate Ashitha C.S.</h2>
+                <p class="hero-desc">
+                    A dedicated BA, LL.B (Hons) graduate actively practising in the <strong>Kerala High Court</strong>, <strong>Kolenchery Court</strong>, <strong>Muvattupuzha Court</strong>, and <strong>Chottanikkara Court</strong>. Specializing in legal drafting, meticulous research, and client-focused litigation.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" id="heroContactBtn">
+                        Schedule Consultation
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#cv" class="btn btn-secondary" id="heroCvBtn">View Credentials</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container">
+                    <img src="ASHITHA-CS-PICTURE.jpeg" alt="Advocate Ashitha C.S. Professional Portrait" class="hero-img">
+                </div>
+                <div class="hero-frame-accent"></div>
+            </div>
+        </div>
+        
+        <a href="#about" class="scroll-down-indicator" aria-label="Scroll down to About section">
+            <span class="mouse-wheel"></span>
+        </a>
+    </section>
+
+    <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */ -->
+    <section id="about" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Profile</span>
+                <h2 class="section-title">About Ashitha</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-intro-card glass-card glass-card-accent">
+                    <div class="about-quote">
+                        "Committed to providing analytical clarity, rigorous legal research, and ethical representation to serve the ends of justice."
+                    </div>
+                    
+                    <ul class="about-personal-details">
+                        <li class="about-detail-item">
+                            <strong>Full Name</strong>
+                            Ashitha C.S.
+                        </li>
+                        <li class="about-detail-item">
+                            <strong>Profession</strong>
+                            Practising Advocate
+                        </li>
+                        <li class="about-detail-item">
+                            <strong>Languages</strong>
+                            English, Malayalam
+                        </li>
+                        <li class="about-detail-item">
+                            <strong>Practice Areas</strong>
+                            Criminal, Matrimonial & Family Law
+                        </li>
+                        <li class="about-detail-item" style="grid-column: span 2; border-top: 1px solid rgba(197, 168, 128, 0.1); padding-top: 15px; margin-top: 5px;">
+                            <strong>Courts of Practice</strong>
+                            Kerala High Court, Kolenchery Court, Muvattupuzha Court, & Chottanikkara Court
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="about-info-text">
+                    <p>
+                        As a practising advocate, I represent clients before the Kerala High Court and sub-ordinate courts in Kolenchery, Muvattupuzha, and Chottanikkara. I am committed to bridging the gap between complex legal provisions and practical, strategic courtroom solutions. Guided by a solid academic background and diverse courtroom exposure, I handle legal disputes with diligence and ethical responsibility.
+                    </p>
+                    <p>
+                        With a strong background in legal research, drafting, and trial strategy, I prepare comprehensive notice pleadings, briefs, petitions, and legal opinions. I strive to provide clear advocacy and solid legal support to achieve favorable outcomes for clients.
+                    </p>
+
+                    <div class="about-education-box">
+                        <h3 class="education-title-heading">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                            </svg>
+                            Academic Foundation
+                        </h3>
+                        <div class="education-card glass-card">
+                            <h4 class="edu-degree">BA, LL.B (Hons)</h4>
+                            <p class="edu-college">Sree Narayana Law College, Poothotta, Ernakulam</p>
+                            <p class="edu-university">Mahatma Gandhi University</p>
+                            <span class="edu-batch">2019 - 2024 Batch</span>
+                        </div>
+                    </div>
+
+                    <div class="languages-box">
+                        <h4 class="skill-name">Linguistic Proficiency</h4>
+                        <ul class="lang-list">
+                            <li class="lang-badge"><span class="lang-dot"></span> English</li>
+                            <li class="lang-badge"><span class="lang-dot"></span> Malayalam</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       PRACTICE AREAS
+       ========================================================================== -->
+    <section id="practice" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Core Focus</span>
+                <h2 class="section-title">Practice Areas</h2>
+            </div>
+
+            <div class="practice-grid">
+                <!-- Card 1: Criminal Law -->
+                <div class="practice-card glass-card" id="practiceCriminal">
+                    <div class="practice-icon-box" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="practice-title">Criminal Law & Procedure</h3>
+                    <p class="practice-desc">
+                        Developing a solid understanding of trial procedures, bail processes, and examination under IPC, CrPC, and the Indian Evidence Act.
+                    </p>
+                    <ul class="practice-features">
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Courtroom Observation & Note-taking
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Bail & Criminal Miscellaneous Petitions
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            FIR & Charge Sheet Analysis
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Family Law -->
+                <div class="practice-card glass-card" id="practiceFamily">
+                    <div class="practice-icon-box" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="practice-title">Matrimonial & Family Law</h3>
+                    <p class="practice-desc">
+                        Gaining insights into family court structures, dissolution of marriages, custody disputes, and legal mediation.
+                    </p>
+                    <ul class="practice-features">
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Matrimonial Petition Drafting
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Mediation & Counselling Insights
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Maintenance & Alimony Claims
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Legal Research -->
+                <div class="practice-card glass-card" id="practiceResearch">
+                    <div class="practice-icon-box" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h3 class="practice-title">Legal Research & Case Precedents</h3>
+                    <p class="practice-desc">
+                        Proficient in conducting comprehensive legal research, analyzing precedents, and briefing cases for senior counsels.
+                    </p>
+                    <ul class="practice-features">
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            SCC Online, Manupatra & Indian Kanoon
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Precedent Tracking & Case Briefing
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Statute Interpretation & Analysis
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Legal Drafting -->
+                <div class="practice-card glass-card" id="practiceDrafting">
+                    <div class="practice-icon-box" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3 class="practice-title">Drafting & Legal Documentation</h3>
+                    <p class="practice-desc">
+                        Creating professional documents, keeping record indexes clean, and ensuring layout/structural accuracy in briefs.
+                    </p>
+                    <ul class="practice-features">
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Notice & Legal Correspondence Drafting
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Written Submissions & Pleading Formats
+                        </li>
+                        <li class="practice-features-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Index Creation & Document Formatting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       EXPERIENCE / TIMELINE
+       ========================================================================== -->
+    <section id="experience" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Career Path</span>
+                <h2 class="section-title">Internship Timeline</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-progress" id="timelineProgress" aria-hidden="true"></div>
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">Grama Panchayath</span>
+                        <h3 class="timeline-title">Thirumaradi Grama Panchayath</h3>
+                        <h4 class="timeline-subtitle">Panchayat Administration Internship</h4>
+                        <p class="timeline-desc">
+                            Observed administrative workflows and dispute redressal processes at the local self-government level.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Studied local administration files under the Kerala Panchayat Raj Act.</li>
+                            <li class="timeline-bullet-item">Observed local dispute resolution and public grievance mechanisms.</li>
+                            <li class="timeline-bullet-item">Analyzed the interface between state legislation and local municipal administration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">Magistrate Court</span>
+                        <h3 class="timeline-title">First Class Judicial Magistrate Court, Piravom</h3>
+                        <h4 class="timeline-subtitle">Court Internship</h4>
+                        <p class="timeline-desc">
+                            Analyzed judicial processes, trial monitoring procedures, and criminal litigation under lower judiciary jurisdiction.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Observed trial hearings, framing of charges, and witness examinations.</li>
+                            <li class="timeline-bullet-item">Studied CrPC and Evidence Act applications in bail and summons filings.</li>
+                            <li class="timeline-bullet-item">Gained key insights into criminal trial protocols and prosecution procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">Claims Tribunal</span>
+                        <h3 class="timeline-title">Motor Accidents Claims Tribunal (MACT), Ernakulam</h3>
+                        <h4 class="timeline-subtitle">Tribunal Internship</h4>
+                        <p class="timeline-desc">
+                            Focused on compensation claims, insurance liability disputes, and personal injury case analysis.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Analyzed claim petitions and compensation calculations under the Motor Vehicles Act.</li>
+                            <li class="timeline-bullet-item">Observed arguments on insurance liabilities, negligence, and award of interest.</li>
+                            <li class="timeline-bullet-item">Reviewed settlement proposals and judicial decrees.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">Land Tribunal</span>
+                        <h3 class="timeline-title">Land Tribunal, Tripunithura</h3>
+                        <h4 class="timeline-subtitle">Land Disputes & Tenancy Internship</h4>
+                        <p class="timeline-desc">
+                            Studied revenue litigation, tenancy reforms, and verification of land registration records.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Reviewed landlord-tenant disputes under the Kerala Land Reforms Act.</li>
+                            <li class="timeline-bullet-item">Studied procedures for issuing purchase certificates and ownership clearances.</li>
+                            <li class="timeline-bullet-item">Observed revenue inquiry hearings and field-verification procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">Municipality</span>
+                        <h3 class="timeline-title">Piravom Municipality</h3>
+                        <h4 class="timeline-subtitle">Urban Administration & Bylaws Internship</h4>
+                        <p class="timeline-desc">
+                            Observed local municipal administrative practices, licensing disputes, and legal drafting for public utility operations.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Analyzed municipal bylaws and regulations under the Kerala Municipality Act.</li>
+                            <li class="timeline-bullet-item">Reviewed administrative appeals regarding building permit violations.</li>
+                            <li class="timeline-bullet-item">Observed municipal council hearings and public administration records.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">ADR Centre</span>
+                        <h3 class="timeline-title">Alternative Dispute Resolution (ADR) Centre</h3>
+                        <h4 class="timeline-subtitle">High Court of Kerala Internship</h4>
+                        <p class="timeline-desc">
+                            Studied non-adversarial conflict resolution methods, mediation techniques, and settlement drafting.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Observed mediation and conciliation processes under CPC Section 89.</li>
+                            <li class="timeline-bullet-item">Analyzed conflict resolution strategies for matrimonial and commercial disputes.</li>
+                            <li class="timeline-bullet-item">Studied the role of mediators in draft settlement agreements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">High Court Chambers</span>
+                        <h3 class="timeline-title">Chambers of Hon'ble Justice Sophy Thomas</h3>
+                        <h4 class="timeline-subtitle">Kerala High Court Judicial Clerkship Observation</h4>
+                        <p class="timeline-desc">
+                            Analyzed complex appellate litigation, formulated case summaries, and conducted in-depth legal research for a High Court judge.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Assisted in examining appeal briefs, civil writs, and case records.</li>
+                            <li class="timeline-bullet-item">Prepared case notes, summarized arguments, and tracked relevant judicial precedents.</li>
+                            <li class="timeline-bullet-item">Observed judgment reasoning and judicial decision-making frameworks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 8 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge" aria-hidden="true"></div>
+                    <div class="timeline-panel glass-card">
+                        <span class="timeline-date">Family Court</span>
+                        <h3 class="timeline-title">Family Court, Ernakulam</h3>
+                        <h4 class="timeline-subtitle">Matrimonial Law Internship</h4>
+                        <p class="timeline-desc">
+                            Examined domestic disputes, reconciliation proceedings, child custody arguments, and alimony claim cases.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li class="timeline-bullet-item">Studied family law statutes, including marriage acts, maintenance, and guardianship.</li>
+                            <li class="timeline-bullet-item">Observed counseling procedures and reconciliation sessions.</li>
+                            <li class="timeline-bullet-item">Reviewed draft petitions, applications, and court-mandated mediation reports.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+    <section id="skills" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Expertise</span>
+                <h2 class="section-title">Skills & Competencies</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div>
+                    <h3 class="skills-column-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                        Professional Competencies
+                    </h3>
+                    
+                    <div class="skills-list">
+                        <!-- Skill 1 -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Legal Research & Case Precedents</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Drafting, Pleadings & Conveyancing</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="85"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 3 -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Courtroom Observation & Procedure</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="80"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 4 -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Legal Documentation & Indexing</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="skills-column-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        Work Philosophy
+                    </h3>
+                    
+                    <div class="competencies-box">
+                        <!-- Competency 1 -->
+                        <div class="competency-card glass-card">
+                            <span class="competency-icon" aria-hidden="true">🔍</span>
+                            <h4 class="competency-name">Analytical Rigor</h4>
+                            <p class="competency-desc">Digging deep into statutes and case files to extract crucial precedents and hidden arguments.</p>
+                        </div>
+
+                        <!-- Competency 2 -->
+                        <div class="competency-card glass-card">
+                            <span class="competency-icon" aria-hidden="true">✍</span>
+                            <h4 class="competency-name">Structured Drafting</h4>
+                            <p class="competency-desc">Drafting with concise grammar, logical formatting, indices, and adherence to court guidelines.</p>
+                        </div>
+
+                        <!-- Competency 3 -->
+                        <div class="competency-card glass-card">
+                            <span class="competency-icon" aria-hidden="true">🗣</span>
+                            <h4 class="competency-name">Clear Articulation</h4>
+                            <p class="competency-desc">Presenting logical assessments, legal briefs, and client reports with complete clarity.</p>
+                        </div>
+
+                        <!-- Competency 4 -->
+                        <div class="competency-card glass-card">
+                            <span class="competency-icon" aria-hidden="true">🤝</span>
+                            <h4 class="competency-name">Professional Ethics</h4>
+                            <p class="competency-desc">Upholding client confidentiality, legal codes, and judicial values above all else.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CV VIEWER SECTION
+       ========================================================================== -->
+    <section id="cv" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Credentials</span>
+                <h2 class="section-title">Curriculum Vitae</h2>
+            </div>
+
+            <div class="cv-viewer-container">
+                <div class="cv-preview-box glass-card" id="cvPreviewBox">
+                    <img src="ASHITHA-CS-CV.jpeg" alt="Ashitha C.S. Resume Preview" class="cv-preview-image">
+                    <div class="cv-overlay-cta">
+                        <h3 class="cv-overlay-title">Professional Resume</h3>
+                        <p class="cv-overlay-desc">
+                            Click to expand the CV in high-resolution, or download the copy using the options below.
+                        </p>
+                        <div class="cv-button-group">
+                            <button class="btn btn-primary" id="openCvBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                                </svg>
+                                View Full Screen
+                            </button>
+                            <a href="ASHITHA-CS-CV.jpeg" download="ASHITHA-CS-CV.jpeg" class="btn btn-secondary" id="downloadCvBtn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                                </svg>
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CV MODAL (LIGHTBOX)
+       ========================================================================== -->
+    <div class="cv-modal" id="cvModal" aria-hidden="true" role="dialog">
+        <div class="cv-modal-content">
+            <button class="cv-modal-close" id="cvModalClose" aria-label="Close CV Viewer">&times;</button>
+            <img src="ASHITHA-CS-CV.jpeg" alt="Ashitha C.S. Full-size Resume" class="cv-modal-img">
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+    <section id="contact" class="section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Reach Out</span>
+                <h2 class="section-title">Contact & Consultation</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card-info glass-card glass-card-accent">
+                    <h3 class="contact-info-title">Let's Connect</h3>
+                    <p class="contact-info-desc">
+                        Whether you require legal representation, advisory services, or professional drafting/research support in the High Court or subordinate courts, reach out today.
+                    </p>
+
+                    <div class="contact-methods">
+                        <!-- Email -->
+                        <div class="contact-method-item">
+                            <div class="contact-method-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Email Address</div>
+                                <a href="mailto:ashithashaju139@gmail.com" class="contact-method-value">ashithashaju139@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Office Hours -->
+                        <div class="contact-method-item">
+                            <div class="contact-method-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-method-label">Availability Hours</div>
+                                <div class="contact-method-value">Mon - Sat: 9:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form glass-card" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-input" placeholder=" " required>
+                            <label for="name" class="form-label">Your Name *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-input" placeholder=" " required>
+                            <label for="email" class="form-label">Email Address *</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" class="form-input" placeholder=" ">
+                        <label for="subject" class="form-label">Subject</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" class="form-input" placeholder=" " required></textarea>
+                        <label for="message" class="form-label">Detailed Message *</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 4px;" id="formSubmitBtn">
+                        Send Message
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <span class="logo-icon" style="margin-right: 0; font-size: 2.2rem;" aria-hidden="true">⚖</span>
+                <span class="logo-text" style="font-size: 1.5rem; margin-top: 10px;">ASHITHA C.S.</span>
+                <span class="logo-subtitle">Practising Advocate</span>
+            </div>
+            
+            <ul class="footer-nav">
+                <li><a href="#home" class="footer-link">Home</a></li>
+                <li><a href="#about" class="footer-link">About</a></li>
+                <li><a href="#practice" class="footer-link">Practice Areas</a></li>
+                <li><a href="#experience" class="footer-link">Internships</a></li>
+                <li><a href="#skills" class="footer-link">Skills</a></li>
+                <li><a href="#cv" class="footer-link">CV</a></li>
+                <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+
+            <div class="footer-divider" aria-hidden="true"></div>
+            
+            <p class="footer-copy">&copy; 2026 Advocate Ashitha C.S. All Rights Reserved. Designed for Legal Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
