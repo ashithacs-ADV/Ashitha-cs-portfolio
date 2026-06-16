@@ -2210,3 +2210,63 @@ textarea.form-input {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   MOBILE PERFORMANCE OVERRIDES
+   Heavy desktop effects (backdrop-blur, fixed bg, animated blur layers,
+   particle canvas) cause scroll jank, jitter and lag on mobile GPUs.
+   ========================================================================== */
+@media (max-width: 900px), (hover: none) {
+    /* Fixed background attachment is a major source of scroll jank on mobile */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* backdrop-filter blur is extremely expensive on mobile — use opaque fallbacks */
+    .glass-card,
+    .glass-card-accent,
+    .navbar,
+    .hero-badge,
+    .btn-secondary,
+    .form-input {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+    .glass-card { background: rgba(16, 20, 36, 0.94); }
+    .glass-card-accent { background: rgba(18, 23, 42, 0.95); }
+    .navbar { background-color: rgba(5, 6, 14, 0.96); }
+    .navbar.scrolled { background-color: rgba(5, 6, 14, 0.98); }
+
+    /* Stop continuously-animated blurred layers from repainting every frame */
+    body::after { display: none; }            /* aurora wash */
+    .bg-grid-overlay { animation: none; }
+    .glow-orb {
+        animation: none !important;
+        filter: blur(70px);
+        opacity: 0.16;
+    }
+
+    /* Decorative spinning/sweeping layers that constantly repaint */
+    .glass-card-accent::before,
+    .hero-image-container::after,
+    .skill-progress::after { display: none; }
+    .hero-frame-accent { animation: none; }
+    .section-title { animation: none; }       /* keep gradient, drop the shimmer loop */
+
+    /* Pointer-only effects — useless on touch, still burn CPU */
+    .particle-canvas,
+    .cursor-glow { display: none !important; }
+
+    /* Disable hover-tilt transforms that can jitter on touch */
+    .glass-card:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Stable viewport height: 100vh jumps when the mobile address bar shows/hides */
+    .hero {
+        min-height: 100svh;
+    }
+    .nav-menu {
+        height: calc(100svh - var(--navbar-height));
+    }
+}

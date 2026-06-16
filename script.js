@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
+    // PERFORMANCE: device check + throttled scroll dispatcher
+    // ==========================================================================
+    // Disable mouse-driven / GPU-heavy effects on touch & small screens.
+    const isLite = window.matchMedia('(max-width: 900px)').matches
+        || window.matchMedia('(hover: none)').matches
+        || ('ontouchstart' in window);
+
+    // Run all scroll handlers in ONE rAF-batched listener to avoid layout thrash / jitter.
+    const scrollHandlers = [];
+    const onScroll = (fn) => scrollHandlers.push(fn);
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        requestAnimationFrame(() => {
+            for (const fn of scrollHandlers) fn();
+            scrollTicking = false;
+        });
+    }, { passive: true });
+
+    // ==========================================================================
     // MOBILE NAVIGATION TOGGLE
     // ==========================================================================
     const mobileToggle = document.getElementById('mobileToggle');
@@ -33,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // NAVBAR SCROLL EFFECT
     // ==========================================================================
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
+    onScroll(() => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -64,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    window.addEventListener('scroll', scrollSpy);
+    onScroll(scrollSpy);
 
     // ==========================================================================
     // INTERSECTION OBSERVER FOR FADE-IN
@@ -210,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // HERO IMAGE PARALLAX TILT EFFECT
     // ==========================================================================
     const heroCard = document.querySelector('.hero-image-container');
-    if (heroCard) {
+    if (heroCard && !isLite) {
         heroCard.addEventListener('mousemove', (e) => {
             const rect = heroCard.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -229,13 +250,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // SPOTLIGHT GLOW EFFECT FOR PRACTICE CARDS
     // ==========================================================================
-    document.querySelectorAll('.practice-card').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            card.style.setProperty('--x', `${e.clientX - rect.left}px`);
-            card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+    if (!isLite) {
+        document.querySelectorAll('.practice-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+            });
         });
-    });
+    }
 
     // ==========================================================================
     // TIMELINE PROGRESS LINE DRAWING ANIMATION
@@ -243,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timeline = document.querySelector('.timeline');
     const timelineProgress = document.getElementById('timelineProgress');
     if (timeline && timelineProgress) {
-        window.addEventListener('scroll', () => {
+        onScroll(() => {
             const rect = timeline.getBoundingClientRect();
             const viewHeight = window.innerHeight;
             if (rect.top < viewHeight && rect.bottom > 0) {
@@ -257,23 +280,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // MAGNETIC BUTTON HOVER EFFECT
     // ==========================================================================
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+    if (!isLite) {
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
         });
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = 'translate(0px, 0px)';
-        });
-    });
+    }
 
     // ==========================================================================
     // CUSTOM CURSOR GLOW TRACKER
     // ==========================================================================
     const cursorGlow = document.getElementById('cursorGlow');
-    if (cursorGlow) {
+    if (cursorGlow && !isLite) {
         let cursorX = 0, cursorY = 0;
         let glowX = 0, glowY = 0;
 
@@ -360,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
             scrollProgressBar.style.width = `${percent}%`;
         };
-        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+        onScroll(updateScrollProgress);
         updateScrollProgress();
     }
 
@@ -391,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SUBTLE 3D TILT FOR GLASS CARDS (futuristic parallax)
     // ==========================================================================
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReducedMotion) {
+    if (!prefersReducedMotion && !isLite) {
         document.querySelectorAll('.competency-card, .timeline-panel').forEach(card => {
             card.style.transformStyle = 'preserve-3d';
             card.addEventListener('mousemove', (e) => {
@@ -440,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // PARTICLE CONSTELLATION CANVAS
     // ==========================================================================
     const canvas = document.getElementById('particleCanvas');
-    if (canvas) {
+    if (canvas && !isLite) {
         const ctx = canvas.getContext('2d');
         let particles = [];
         let mouse = { x: null, y: null };
